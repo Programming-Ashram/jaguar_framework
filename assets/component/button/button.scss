@@ -13,7 +13,7 @@
     letter-spacing: pxtorem(1);
 
     
-    &:is(.is-disabled){
+    &:is(.disabled){
         cursor: none;
         pointer-events: none;
         background-color: $disabled;
@@ -21,7 +21,7 @@
         opacity: 0.7;
     }
 
-    &:is(.is-rounded){
+    &:is(.rounded){
         border-radius: pxtorem(60);
     }
 

@@ -518,14 +518,14 @@
   margin: 0.625rem 0;
   letter-spacing: 0.0625rem;
 }
-.btn-flat:is(.is-disabled) {
+.btn-flat:is(.disabled) {
   cursor: none;
   pointer-events: none;
   background-color: #474A52;
   color: #34373D;
   opacity: 0.7;
 }
-.btn-flat:is(.is-rounded) {
+.btn-flat:is(.rounded) {
   border-radius: 3.75rem;
 }
 .btn-flat:not(.btn-sm) {
