@@ -508,7 +508,7 @@
   box-shadow: 0 0.125rem 0.3125rem 0 rgba(128, 128, 128, 0.7215686275);
 }
 
-.btn-flat {
+.btn-flat, a.btn-flat {
   border-radius: 0.5rem;
   border: none;
   cursor: pointer;
@@ -517,22 +517,25 @@
   align-items: center;
   margin: 0.625rem 0;
   letter-spacing: 0.0625rem;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-.btn-flat:is(.disabled) {
+.btn-flat:is(.disabled), a.btn-flat:is(.disabled) {
   cursor: none;
   pointer-events: none;
   background-color: #474A52;
   color: #34373D;
   opacity: 0.7;
 }
-.btn-flat:is(.rounded) {
+.btn-flat:is(.rounded), a.btn-flat:is(.rounded) {
   border-radius: 3.75rem;
 }
-.btn-flat:not(.btn-sm) {
+.btn-flat:not(.btn-sm), a.btn-flat:not(.btn-sm) {
   padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
 }
-.btn-flat:is(.btn-sm) {
+.btn-flat:is(.btn-sm), a.btn-flat:is(.btn-sm) {
   padding: 0.375rem 0.625rem;
   font-size: 0.75rem;
 }/*# sourceMappingURL=button.css.map */

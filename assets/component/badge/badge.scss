@@ -1,0 +1,56 @@
+@import '../../utilites/function';
+@import '../../utilites/variable';
+
+
+.badge{
+    padding: pxtorem(3) pxtorem(6);
+    color: $light;
+    border-radius: pxtorem(6);
+    width: fit-content;
+    font-size: pxtorem(12);
+    margin: 0.2em;
+    display: inline-block;
+    // Looping classes
+    &:not(.rounded){
+        border-radius: pxtorem(6);
+    }
+    &:is(.rounded){
+        border-radius: pxtorem(60);
+    }
+    $colors:(
+        'primary':$primary,
+        'primary-mid': $primary-25,
+        'primary-light':$primary-50,
+
+        'warning':$warning,
+        'warning-mid': $warning-25,
+        'warning-light':$warning-50,
+        
+        'error':$error,
+        'error-mid': $error-25,
+        'error-light':$error-50,
+        
+        'success':$success,
+        'success-mid': $success-25,
+        'success-light':$success-50,
+        
+        'natural':$natural,
+        'natural-mid': $natural-25,
+        'natural-light':$natural-50,
+    );
+
+    @each $color-name, $color-value in $colors{
+    
+        &.badge-#{$color-name}{
+            background-color: $color-value;
+            border: pxtorem(1) solid lighten($color-value, 20);
+
+            &.outline-badge{
+                background-color: transparent;
+                border: pxtorem(1) solid $color-value;
+                color: $color-value;
+            }
+        }
+    }
+
+}
