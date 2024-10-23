@@ -43,13 +43,24 @@
     
         &.badge-#{$color-name}{
             background-color: $color-value;
-            border: pxtorem(1) solid lighten($color-value, 20);
-
+           
+            &:not(.dashed, .outline-badge){
+                border: pxtorem(1) solid lighten($color-value, 20);
+            }
+            
             &.outline-badge{
                 background-color: transparent;
-                border: pxtorem(1) solid $color-value;
                 color: $color-value;
+
+                &:not(.dashed){
+                    border: pxtorem(1) solid $color-value;
+                }
+
+                &:is(.dashed){
+                    border: pxtorem(1) dashed $color-value !important;
+                }
             }
+            
         }
     }
 

@@ -2,87 +2,95 @@
 @import '../../utilites/function';
 
 // Looping classes
-$colors:(
-    'primary':$primary,
+$colors: (
+    'primary': $primary,
     'primary-mid': $primary-25,
-    'primary-light':$primary-50,
+    'primary-light': $primary-50,
 
-    'warning':$warning,
+    'warning': $warning,
     'warning-mid': $warning-25,
-    'warning-light':$warning-50,
+    'warning-light': $warning-50,
     
-    'error':$error,
+    'error': $error,
     'error-mid': $error-25,
-    'error-light':$error-50,
+    'error-light': $error-50,
     
-    'success':$success,
+    'success': $success,
     'success-mid': $success-25,
-    'success-light':$success-50,
+    'success-light': $success-50,
     
-    'natural':$natural,
+    'natural': $natural,
     'natural-mid': $natural-25,
-    'natural-light':$natural-50,
+    'natural-light': $natural-50,
 );
 
-@each $color-name, $color-value in $colors{
-    .outline-btn-#{$color-name}{
-        border:pxtorem(1) solid $color-value !important;
+@each $color-name, $color-value in $colors {
+    .outline-btn-#{$color-name} {
+        border: pxtorem(1) solid $color-value !important;
         color: $color-value;
         background-color: transparent;
 
-        &:hover{
+        &:hover {
             background-color: $color-value;
             color: $light;
             transition: 0.2s ease-out;
-            
         }
 
-        &:is(.is-inset){
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 pxtorem(3) lighten($color-value, 40%);
+            transition: 0.2s ease-in-out;
+        }
+
+        &:is(.is-inset) {
             border: pxtorem(2) inset lighten($color-value, 20%);
 
-            &:focus{
+            &:focus {
                 transition: 0.5s;
                 border-width: 1px;
             }
         }
-        
     }
-    .btn-#{$color-name}{
+
+    .btn-#{$color-name} {
         background-color: $color-value;
         color: $light;
 
-        &:is(.is-inset){
-            border:pxtorem(2) inset lighten($color-value, 20%);
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 pxtorem(3) lighten($color-value, 40%);
+            transition: 0.2s ease-in-out;
+        }
 
-            &:focus{
+        &:is(.is-inset) {
+            border: pxtorem(2) inset lighten($color-value, 20%);
+
+            &:focus {
                 transition: 0.5s;
                 border-width: pxtorem(1);
             }
         }
 
-        &:hover{
+        &:hover {
             transition: 0.2s ease-out;
             box-shadow: 0 pxtorem(2) pxtorem(5) 0 #808080b8;
         }
-        
     }
 }
 
-
-.btn-flat, a.btn-flat{
+.btn-flat, a.btn-flat {
     border-radius: pxtorem(8);
     border: none;
     cursor: pointer;
     display: block;
-    gap:pxtorem(2);
+    gap: pxtorem(2);
     align-items: center;
-    margin:pxtorem(10) 0;
+    margin: pxtorem(10) 0;
     letter-spacing: pxtorem(1);
     text-decoration: none;
     width: fit-content;
 
-    
-    &:is(.disabled){
+    &:is(.disabled) {
         cursor: none;
         pointer-events: none;
         background-color: $disabled;
@@ -90,17 +98,23 @@ $colors:(
         opacity: 0.7;
     }
 
-    &:is(.rounded){
+    &:is(.rounded) {
         border-radius: pxtorem(60);
     }
 
-    &:not(.btn-sm){
+    &:not(.btn-sm) {
         padding: pxtorem(8) pxtorem(12);
         font-size: pxtorem(14);
     }
 
-    &:is(.btn-sm){
+    &:is(.btn-sm) {
         padding: pxtorem(6) pxtorem(10);
         font-size: pxtorem(12);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 pxtorem(3) lighten($primary, 40%);
+        transition: 0.2s ease-in-out;
     }
 }
