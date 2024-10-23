@@ -1,0 +1,64 @@
+.card {
+  padding: 0.625rem;
+  background-color: #ffffff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0 0.5rem 1.5rem;
+  width: 100%;
+}
+.card:not(.flat) {
+  border-radius: 0.5rem;
+}
+.card:is(.flat) {
+  border-radius: 0.5rem;
+}
+.card:is(.card-bordered) {
+  border: 0.0625rem solid #D7DAE0;
+}
+.card .card-header .title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.125rem;
+  margin: 0.15625rem 0;
+}
+.card .card-header .subtitle {
+  font-size: 0.75rem;
+  color: #929AAB;
+  margin: 0.15625rem 0;
+  font-weight: 400;
+}
+.card .card-header:is(.bordered) {
+  border-bottom: 0.0625rem solid #D7DAE0;
+  margin-bottom: 0.5rem;
+}
+.card .card-header:is(.with-widgets) {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+}
+.card .card-header:is(.with-widgets) .avatar img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.card p, .card .card-body, .card .card-content {
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  margin: 0.31875rem 0;
+}
+
+.avatar img {
+  width: 1.875rem;
+  height: 1.875rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  border: 0.125rem solid #ffffff;
+  position: relative;
+}
+.avatar.avatar-group img {
+  margin-left: -0.5rem;
+}
+.avatar.avatar-group img:nth-child(odd) {
+  right: -0.3125rem;
+}
+.avatar.avatar-group img:last-child {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}/*# sourceMappingURL=card.css.map */

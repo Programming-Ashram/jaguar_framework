@@ -1,0 +1,78 @@
+@import '../../utilites/function';
+@import '../../utilites/mixin';
+@import '../../utilites/variable';
+
+.card{
+    padding: pxtorem(10);
+    &:not(.flat){ border-radius: pxtorem(8);}
+    &:is(.flat){ border-radius: pxtorem(8);}
+    background-color: $light;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 pxtorem(8) pxtorem(24);
+    width: 100%;
+
+    &:is(.card-bordered){
+        border: pxtorem(1) solid $natural-50;
+    }
+
+
+    .card-header{
+        .title{
+            font-size: pxtorem(18);
+            font-weight: 500;
+            line-height: pxtorem(18);
+            margin: pxtorem(2.5) 0;
+        }
+        .subtitle{
+            font-size: pxtorem(12);
+            color: $natural-25;
+            margin: pxtorem(2.5) 0;
+            font-weight:400;
+        }
+        &:is(.bordered){
+            border-bottom: pxtorem(1) solid $natural-50;
+            margin-bottom:  pxtorem(8);
+        }
+        &:is(.with-widgets){
+            display: flex;
+            gap: pxtorem(10);
+            align-items: center;
+
+            .avatar{
+                img{
+                    width: pxtorem(40);
+                    height: pxtorem(40);
+                }
+            }
+        }
+    }
+    
+    p,.card-body, .card-content{
+        font-size: pxtorem(12);
+        line-height: pxtorem(15);
+        margin: pxtorem(5.1) 0;
+    }
+}
+
+// Avatar Component
+.avatar{
+    img{
+        width: pxtorem(30);
+        height: pxtorem(30);
+        object-fit: cover;
+        border-radius: 100%;
+        border: pxtorem(2) solid $light;
+        position: relative;
+    }
+  
+    &.avatar-group{
+        img{
+            margin-left: pxtorem(-8);
+            &:nth-child(odd){
+                right: pxtorem(-5);
+            }
+            &:last-child{
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            }
+        }
+    }
+}
