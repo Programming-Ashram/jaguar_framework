@@ -10,14 +10,4 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  padding: 10px;
-}
-
-h6 {
-  margin-top: 20px;
-}
-
-.row {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
 }/*# sourceMappingURL=main.css.map */
