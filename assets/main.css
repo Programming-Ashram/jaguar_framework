@@ -2,6 +2,67 @@
 @import url(../assets/component/badge/badge.css);
 @import url(../assets/component//card/card.css);
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.with-elevated {
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: -12px 14px 20px -10px gray;
+  border-radius: 8px;
+  padding: 10px;
+}
+@media (max-width: 767px) {
+  .with-elevated {
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
+}
+.with-elevated .table-title {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+  border-radius: 4px;
+  background-color: white;
+}
+table th, table td {
+  padding: 10px;
+}
+table th thead th:first-child, table td thead th:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+table thth, table tdth {
+  font-weight: 600;
+}
+table td {
+  color: black;
+  font-size: 14px;
+}
+table:is(.with-border) {
+  border: 1px solid rgba(211, 211, 211, 0.93);
+  border-collapse: collapse;
+}
+table:is(.with-border) th, table:is(.with-border) td, table:is(.with-border) tbody, table:is(.with-border) thead {
+  border: 1px solid rgba(211, 211, 211, 0.93);
+}
+table:is(.with-striped) tbody tr:nth-child(even) {
+  background-color: rgba(211, 211, 211, 0.2392156863);
+}
+table:is(.with-striped) tbody tr:nth-child(even) {
+  background-color: rgba(211, 211, 211, 0.2392156863);
+}
+table:is(.with-effect) tbody tr:hover {
+  background-color: rgba(128, 128, 128, 0.4588235294);
+}
+table:is(.with-effect) tbody tr:focus {
+  background-color: rgba(128, 128, 128, 0.34);
+}
+
 * {
   margin: 0;
   padding: 0;
